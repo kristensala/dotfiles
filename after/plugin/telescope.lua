@@ -3,10 +3,6 @@ if (not status) then return end
 local actions = require('telescope.actions')
 local builtin = require("telescope.builtin")
 
-local function telescope_buffer_dir()
-  return vim.fn.expand('%:p:h')
-end
-
 telescope.setup {
   defaults = {
     mappings = {
@@ -16,33 +12,13 @@ telescope.setup {
     },
   },
   extensions = {
-
-  }
+  },
 }
 
-vim.keymap.set('n', ';f',
-  function()
-    builtin.find_files({
-      no_ignore = false,
-      hidden = true
-    })
-  end)
-vim.keymap.set('n', ';r', function()
+vim.keymap.set('n', '<leader>ff', function()
+    builtin.find_files()
+end)
+vim.keymap.set('n', '<leader>g', function()
   builtin.live_grep()
 end)
-vim.keymap.set('n', '\\\\', function()
-  builtin.buffers()
-end)
-vim.keymap.set('n', ';t', function()
-  builtin.help_tags()
-end)
-vim.keymap.set('n', ';;', function()
-  builtin.resume()
-end)
-vim.keymap.set('n', ';e', function()
-  builtin.diagnostics()
-end)
-
-
-
 

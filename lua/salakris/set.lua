@@ -11,6 +11,13 @@ vim.opt.incsearch = true
 vim.opt.smartindent = true
 vim.opt.wrap = false
 
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+
+vim.opt.updatetime = 50
 
 vim.g.mapleader = ","
 
+vim.diagnostic.config({
+    virtual_text = true
+})
