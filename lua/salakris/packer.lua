@@ -5,6 +5,11 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use 'morhetz/gruvbox'
+    use({
+        'rose-pine/neovim',
+        as = 'rose-pine'
+    })
+    use 'rebelot/kanagawa.nvim'
     use 'nvim-lua/plenary.nvim'
     use {
         'nvim-lualine/lualine.nvim',
@@ -43,5 +48,5 @@ return require('packer').startup(function(use)
 	  }
     }
     use {'theprimeagen/harpoon'}
+    use {'maxmellon/vim-jsx-pretty'}
 end)
-

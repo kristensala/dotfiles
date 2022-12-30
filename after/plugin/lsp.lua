@@ -3,9 +3,12 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
+    'html',
   'tsserver',
   'eslint',
   'sumneko_lua',
+  'omnisharp',
+    'rust_analyzer'
 })
 
 local cmp = require('cmp')
@@ -34,6 +37,15 @@ lsp.set_preferences({
         hint = 'H',
         info = 'I'
     }
+})
+
+lsp.configure('eslint', {
+    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue", "svelte", "astro" }
+
+})
+
+lsp.configure('tsserver', {
+    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue", "svelte", "astro" }
 })
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] =
