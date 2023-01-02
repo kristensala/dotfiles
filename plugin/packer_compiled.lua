@@ -109,11 +109,6 @@ _G.packer_plugins = {
     path = "/home/salakris/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  gruvbox = {
-    loaded = true,
-    path = "/home/salakris/.local/share/nvim/site/pack/packer/start/gruvbox",
-    url = "https://github.com/morhetz/gruvbox"
-  },
   harpoon = {
     loaded = true,
     path = "/home/salakris/.local/share/nvim/site/pack/packer/start/harpoon",
