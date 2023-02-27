@@ -11,10 +11,6 @@ return require('packer').startup(function(use)
     use 'rebelot/kanagawa.nvim'
     use 'nvim-lua/plenary.nvim'
     use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
-    use {
             'nvim-treesitter/nvim-treesitter',
             run = function()
                 local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
@@ -48,4 +44,8 @@ return require('packer').startup(function(use)
     }
     use {'theprimeagen/harpoon'}
     use {'maxmellon/vim-jsx-pretty'}
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 end)
