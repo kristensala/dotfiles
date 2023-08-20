@@ -3,10 +3,10 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
+    'gopls',
     'html',
     'tsserver',
     'eslint',
-    'sumneko_lua',
     'rust_analyzer'
 })
 
