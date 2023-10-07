@@ -108,6 +108,9 @@ alias asd="setxkbmap us"
 alias asdf="setxkbmap ee"
 alias i3lock="i3lock --color 000000"
 alias tmux='TERM=xterm-256color tmux'
+
+# alias to update nvim conf
+alias uvim="cp -R ~/Documents/personal/dotfiles/nvim/ ~/.config/"
 # TODO: add a default command
 
 # Turso
