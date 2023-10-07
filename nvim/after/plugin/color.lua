@@ -1,9 +1,12 @@
---vim.cmd('colorscheme rose-pine')
+require("nightfox").setup({
+    terminal_colors = false,
+    options = {
+        styles = {
+            comments = "italic",
+            strings = "italic"
 
-require("kanagawa").setup {
-    background = {
-        dark = "dragon"
+        }
     }
-}
+})
 
-vim.cmd('colorscheme kanagawa')
+vim.cmd('colorscheme nightfox')
