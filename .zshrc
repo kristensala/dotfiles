@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias sd="cd ~ && cd \$(find * -type d ! -path '*/node_modules/*' ! -path '*/.next/*' ! -path '*/.git/*' | fzf)"
+alias sd="cd \$(pwd) && \$(fdfind . $HOME --type d | fzf)"
 alias vim="~/.local/bin/nvim"
 
 #toggle keyboard between estonian and us layout
