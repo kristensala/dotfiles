@@ -100,18 +100,27 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Make sure that fdfind is installed
 alias sd="cd \$(pwd) && \$(fdfind . $HOME --type d | fzf)"
+
 alias vim="~/.local/bin/nvim"
 
-#toggle keyboard between estonian and us layout
+# Toggle keyboard between estonian and us layout
 alias asd="setxkbmap us"
 alias asdf="setxkbmap ee"
-alias i3lock="i3lock --color 000000"
-alias tmux='TERM=xterm-256color tmux'
 
-# alias to update nvim conf
-alias uvim="cp -R ~/Documents/personal/dotfiles/nvim/ ~/.config/"
-# TODO: add a default command
+alias i3lock="i3lock --color 000000"
+
+# Makes sure that tmux does not override nvim colors
+alias tmux='TERM=xterm-256color tmux' 
+
+# Alias to update nvim conf; dotfiles is a git repository and contains more than just vim conf
+#alias uvim="cp -R ~/Documents/personal/dotfiles/nvim/ ~/.config/"
 
 # Turso
 export PATH="/home/salakris/.turso:$PATH"
+
+# Golang
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin:/usr/local/go/bin"
