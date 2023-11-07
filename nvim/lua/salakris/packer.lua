@@ -4,7 +4,10 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    use "EdenEast/nightfox.nvim"
+    use {
+        "mcchrish/zenbones.nvim",
+        requires = "rktjmp/lush.nvim"
+    }
     use 'nvim-lua/plenary.nvim'
     use {
             'nvim-treesitter/nvim-treesitter',
