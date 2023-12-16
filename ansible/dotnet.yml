@@ -4,9 +4,12 @@
   gather_facts: yes
   
   tasks:
-    - name: Install dotnet-sdks
+    - name: Install dotnet-sdk 8
       apt:
-        pkg:
-          - dotnet-sdk-8.0
-          - dotnet-sdk-6.0
+        name: dotnet-sdk-8.0
+        update_cache=true
+
+    - name: Install dotnet-sdk 6
+      apt:
+        name: dotnet-sdk-6.0
         update_cache=true
