@@ -18,10 +18,16 @@
         state: directory
 
     - name: Download and imort the Nodesrouce GPG key
-      command: curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+      command: curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key 
+
+    - name: Dearmor
+      command: gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 
     - name: Create deb repository
-      command: echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+      command: echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main"
+
+    - name: Tee
+      command: tee /etc/apt/sources.list.d/nodesource.list
 
     - name: Install node
       apt:
