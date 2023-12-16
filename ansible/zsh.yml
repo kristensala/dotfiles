@@ -6,7 +6,8 @@
   tasks:
     - name: Install zsh
       apt:
-        name:zsh
+        name: zsh
+        update_cache: yes
 
     - name: Set zsh as default shell
       command: chsh -s $(which zsh)
