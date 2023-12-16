@@ -4,18 +4,14 @@
   gather_facts: yes
   
   tasks:
-    - name: Purge microsoft packages
-      command: sudo dpkg --purge packages-microsoft-prod 
+    - name: Get dotnet install script
+      command: wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
 
-    - name: Install microsoft packages
-      command: sudo dpkg -i packages-microsoft-prod.deb
+    - name: Change script permissions
+      command: chmod +x ./dotnet-install.sh
 
-    - name: Install dotnet-sdk 8
-      apt:
-        name: dotnet-sdk-8.0
-        update_cache: true
+    - name: Install dotnet sdk 8
+      command: ./dotnet-install.sh --channel 8.0
 
-    - name: Install dotnet-sdk 6
-      apt:
-        name: dotnet-sdk-6.0
-        update_cache: true
+    - name: Install dotnet sdk 6
+      command: ./dotnet-install.sh --channel 6.0
