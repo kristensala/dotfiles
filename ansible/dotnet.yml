@@ -1,0 +1,12 @@
+- name: Setup dotnet
+  hosts: localhost
+  become: yes
+  gather_facts: yes
+  
+  tasks:
+    - name: Install dotnet-sdks
+      apt:
+        pkg:
+          - dotnet-sdk-8.0
+          - dotnet-sdk-6.0
+        update_cache=true
