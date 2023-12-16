@@ -4,8 +4,11 @@
   gather_facts: yes
   
   tasks:
-    - name: setup env for dotnet Install
-      command: sudo dpkg --purge packages-microsoft-prod && sudo dpkg -i packages-microsoft-prod.deb
+    - name: Purge microsoft packages
+      command: sudo dpkg --purge packages-microsoft-prod 
+
+    - name: Install microsoft packages
+      command: sudo dpkg -i packages-microsoft-prod.deb
 
     - name: Install dotnet-sdk 8
       apt:
