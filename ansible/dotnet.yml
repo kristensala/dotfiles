@@ -7,9 +7,9 @@
     - name: Install dotnet-sdk 8
       apt:
         name: dotnet-sdk-8.0
-        update_cache=true
+        update_cache: true
 
     - name: Install dotnet-sdk 6
       apt:
         name: dotnet-sdk-6.0
-        update_cache=true
+        update_cache: true
