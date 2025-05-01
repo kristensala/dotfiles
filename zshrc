@@ -102,9 +102,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Make sure that fdfind is installed
+# FuzzyFind
 alias sd="cd \$(pwd) && \$(fdfind . $HOME --type d | fzf)"
 
-alias vim="~/.local/bin/nvim"
+alias vim="nvim"
+
+alias resinit="xrandr --newmode '2880x2160_60.00' 534.50  2880 3120 3432 3984  2160 2163 2167 2237 -hsync +vsync && xrandr --addmode DP-1 '2880x2160_60.00' && xrandr --auto --output DP-1 --mode 2880x2160_60.00 --right-of eDP-1"
+alias reswork="xrandr --auto --output DP-1 --mode 2880x2160_60.00 --right-of eDP-1"
+alias default="xrandr --auto --output DP-1 --mode 3840x2160 --right-of eDP-1"
 
 # Toggle keyboard between estonian and us layout
 alias asd="setxkbmap us"
@@ -115,8 +120,7 @@ alias i3lock="i3lock --color 000000"
 # Makes sure that tmux does not override nvim colors
 alias tmux='TERM=xterm-256color tmux' 
 
-# Alias to update nvim conf; dotfiles is a git repository and contains more than just vim conf
-#alias uvim="cp -R ~/Documents/personal/dotfiles/nvim/ ~/.config/"
+# alias display='xrandr --auto --output DP-1 --mode'
 
 # Turso
 export PATH="/home/salakris/.turso:$PATH"
@@ -124,3 +128,16 @@ export PATH="/home/salakris/.turso:$PATH"
 # Golang
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin:/usr/local/go/bin"
+
+# Odin
+export PATH="$PATH:/usr/local/odin"
+
+# dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+
+#nvim
+export PATH="$PATH:/opt/nvim-linux64/bin"
+alias nvimconf="nvim ~/.config/nvim"
+
+
