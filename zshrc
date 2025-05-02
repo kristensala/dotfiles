@@ -101,11 +101,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-alias vim="/usr/local/share/nvim-linux64/bin/nvim"
+#nvim
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+alias vim="nvim"
 
 #alias sd="cd \$(pwd) && \$(fdfind . $HOME --type d . --exclude node_modules/ . --exclude snap/ | fzf)"
-alias sd="cd \$(pwd) && \$(fdfind . $HOME/Documents ~/Documents/dev ~/Android/Sdk/ --min-depth 1 --max-depth 1 --type d . --exclude node_modules/ . --exclude snap/| fzf)"
-alias sdf="cd \$(pwd) && \$(fdfind . $HOME/Documents/dev --min-depth 1 --max-depth 1 --type d . --exclude node_modules/ . --exclude snap/| fzf)"
+alias sd="cd \$(pwd) && \$(fdfind . $HOME/Documents --min-depth 1 --max-depth 5 --type d . --exclude node_modules/ . --exclude snap/| fzf)"
+alias sdf="cd \$(pwd) && \$(fdfind . $HOME --min-depth 1 --max-depth 5 --type f . --exclude node_modules/ . --exclude snap/| fzf)"
 
 # Toggle keyboard between estonian and us layout
 alias asd="setxkbmap us"
@@ -133,8 +135,8 @@ export PATH=$PATH:$HOME/dotnet
 
 export PATH=$PATH:/usr/local/go/bin
 
-# odin
-export PATH="$PATH:$HOME/odin"
+# Odin
+export PATH="$PATH:/usr/local/odin"
 
 export NVM_DIR="$HOME/.nvm"
 # This lazy loads nvm
