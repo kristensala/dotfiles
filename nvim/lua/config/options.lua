@@ -22,8 +22,3 @@ vim.g.mapleader = ","
 vim.diagnostic.config({
     virtual_text = true
 })
-
---vim.opt.list = true
---vim.opt.listchars = {
---    space = "·",
---}
