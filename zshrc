@@ -105,8 +105,9 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 alias vim="nvim"
 
-#alias sd="cd \$(pwd) && \$(fdfind . $HOME --type d . --exclude node_modules/ . --exclude snap/ | fzf)"
-alias sd="cd \$(pwd) && \$(fdfind . $HOME/Documents --min-depth 1 --max-depth 5 --type d . --exclude node_modules/ . --exclude snap/| fzf)"
+# alias sd="cd \$(pwd) && \$(fdfind . $HOME --type d . --exclude node_modules/ . --exclude snap/ | fzf)"
+# alias sd="cd \$(pwd) && \$(fdfind . $HOME/Documents --max-depth 5 --type d . --exclude node_modules/ . --exclude snap/| fzf)"
+alias sd="cd \$(pwd) && \$(fdfind --type d . --base-directory $HOME -a --max-depth 6 . --exclude node_modules --exclude .git --exclude snap --exclude Downloads --exclude 'dotnet*' | fzf)"
 alias sdf="cd \$(pwd) && \$(fdfind . $HOME --min-depth 1 --max-depth 5 --type f . --exclude node_modules/ . --exclude snap/| fzf)"
 
 # Toggle keyboard between estonian and us layout
