@@ -45,5 +45,15 @@ return {
                 end,
             }
         })
+
+        require("lspconfig").ts_ls.setup({
+            filetypes = {
+                "javascript",
+                "javascriptreact",
+                "typescript",
+                "typescriptreact",
+                "typescript.tsx"
+            },
+        })
     end
 }
