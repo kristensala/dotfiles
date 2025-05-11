@@ -28,12 +28,12 @@ return {
         keymap = { preset = 'default' },
 
         completion = {
-            documentation = { auto_show = false },
+            documentation = { auto_show = true },
 
             menu = {
                 draw = {
                     columns = {
-                        { "label", "label_description", gap = 1 },
+                        { "label", "label_description", "source_name", gap = 1 },
                     }
                 }
             }
